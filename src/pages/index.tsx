@@ -3,7 +3,6 @@ import type { NextPage } from "next";
 // import { render } from "react-dom";
 import { DatePicker, message, Alert, Button } from "antd";
 
-import "antd/dist/antd.css";
 import Link from "next/link";
 // import "./index.css";
 
@@ -38,10 +37,13 @@ const App: NextPage = () => {
         </Button>
       </div>
       <Link href="buttons">
-        <Button type="link">Buttons</Button>
+        <Button>Buttons</Button>
       </Link>
       <Link href="icons">
-        <Button href="icons">Icons</Button>
+        <Button>Icons</Button>
+      </Link>
+      <Link href="typography">
+        <Button>typography</Button>
       </Link>
     </div>
   );
