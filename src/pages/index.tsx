@@ -45,6 +45,9 @@ const App: NextPage = () => {
       <Link href="typography">
         <Button>typography</Button>
       </Link>
+      <Link href="input">
+        <Button>input</Button>
+      </Link>
     </div>
   );
 };

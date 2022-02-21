@@ -1,8 +1,10 @@
 import { Space, Typography } from "antd";
+import { useState } from "react";
 import { Container } from "../components/Container";
 const { Title, Paragraph, Text, Link } = Typography;
 
 const typography = () => {
+  const [editar, setEditar] = useState("Texto editable");
   return (
     <Container>
       {[1, 2, 3, 4, 5].map((i: any) => (
@@ -37,6 +39,7 @@ const typography = () => {
           magni fugit quam, cumque ipsam ipsa alias odit aliquid perferendis
           fuga ut rem similique sint a aspernatur optio architecto delectus.
         </Paragraph>
+        <Paragraph editable={{ onChange: setEditar }}>{editar}</Paragraph>
       </Space>
     </Container>
   );
