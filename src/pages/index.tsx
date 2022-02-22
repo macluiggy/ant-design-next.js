@@ -48,6 +48,9 @@ const App: NextPage = () => {
       <Link href="input">
         <Button>input</Button>
       </Link>
+      <Link href="select">
+        <Button>select</Button>
+      </Link>
     </div>
   );
 };
