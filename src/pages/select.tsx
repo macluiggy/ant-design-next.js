@@ -4,6 +4,15 @@ import { Container } from "../components/Container";
 const { Option } = Select;
 
 const select = () => {
+  const onFocusEvent = () => {
+    console.log("onFocusEvent");
+  };
+  const onBlurEvent = () => {
+    console.log("onBlurEvent");
+  };
+  const onChangeEvent = (value: any) => {
+    console.table("onChangeEvent", value);
+  };
   return (
     <Container>
       <Select
@@ -14,6 +23,9 @@ const select = () => {
         className="select"
         mode="multiple"
         defaultValue={["1", "2"]}
+        onFocus={onFocusEvent}
+        onBlur={onBlurEvent}
+        onChange={onChangeEvent}
       >
         <Option value="1">Mexico</Option>
         <Option value="2">USA</Option>

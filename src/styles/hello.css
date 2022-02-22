@@ -7,3 +7,11 @@
 .select {
   width: 50%;
 }
+
+.messageSuccess {
+  background-color: aqua;
+}
+.ant-message-notice-content {
+  background-color: black;
+  color: aquamarine;
+}
