@@ -57,6 +57,9 @@ const App: NextPage = () => {
       <Link href="grid-system">
         <Button>grid-system</Button>
       </Link>
+      <Link href="form">
+        <Button>form</Button>
+      </Link>
     </div>
   );
 };
