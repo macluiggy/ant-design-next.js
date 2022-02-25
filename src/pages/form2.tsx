@@ -10,6 +10,7 @@ import {
   Radio,
   DatePicker,
   Select,
+  message,
 } from "antd";
 import "moment/locale/es";
 import locale from "antd/es/date-picker/locale/es_ES";
@@ -23,9 +24,12 @@ const FormComponent = () => {
   const formRef = createRef<any>();
   const formSucces = (data) => {
     console.log("Form sent succesfully", data);
+    message.success("Form sent succesfully", 10);
+    formRef.current.resetFields();
   };
   const formError = (error) => {
     console.log("Form sent with errors", error);
+    message.error("Form sent with errors", 10);
   };
   const onChange = (e) => setValue(e.target.value);
 
@@ -44,6 +48,18 @@ const FormComponent = () => {
   const borrarCampos = () => {
     formRef.current.resetFields();
   };
+
+  const formItemLayout = {
+    labelCol: {
+      xs: { span: 24 / 2 },
+      sm: { span: 8 },
+    },
+    wrapperCol: {
+      xs: { span: 24 / 6 },
+      sm: { span: 20 },
+    },
+  };
+
   return (
     <Container>
       <div>
@@ -51,6 +67,7 @@ const FormComponent = () => {
           <Col xs={1} sm={2} md={6} lg={7}></Col>
           <Col xs={22} sm={20} md={2} lg={10}>
             <Form
+              {...formItemLayout}
               ref={formRef}
               name="form"
               initialValues={{
