@@ -60,6 +60,9 @@ const App: NextPage = () => {
       <Link href="form">
         <Button>form</Button>
       </Link>
+      <Link href="form2">
+        <Button>form2</Button>
+      </Link>
     </div>
   );
 };
